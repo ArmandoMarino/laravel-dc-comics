@@ -19,10 +19,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::resource('comics', ComicController::class);
 
+//! IN CASO DI LINK IMPORTATI DAL CONFIG
 // Route::get('/characters', function () {
 //     return view('characters');
 // })->name('characters');
-
 
 // Route::get('/movies', function () {
 //     return view('movies');

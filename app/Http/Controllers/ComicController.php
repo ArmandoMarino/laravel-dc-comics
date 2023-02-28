@@ -40,7 +40,9 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // CONTROLLO CHE SE l'ID non CORRISPONDE AD UN ID VERO VA IN 404
+        $comic = Comic::findOrFail($id);
+        return view('comics.show', compact('comic'));
     }
 
     /**
