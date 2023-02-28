@@ -1,4 +1,5 @@
 @php
+// LINKS IMPORTATI DA config ma non usati qui
   $links = config('menu'); 
 @endphp
 
@@ -10,11 +11,14 @@
     </figure>
     <nav>
         <ul>
-            @foreach ($links as $link)
+            {{-- @foreach ($links as $link) --}}
             <li>
-                <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route($link['route_name']) }}">{{$link['text']}}</a>
+                <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route('home') }}">Home</a>
             </li>
-            @endforeach
+            <li>
+                <a class="nav-link @if (Route::is('comics.index')) active @endif" href="{{ route('comics.index') }}">Comics</a>
+            </li>
+            {{-- @endforeach --}}
 
         </ul>
     </nav>
