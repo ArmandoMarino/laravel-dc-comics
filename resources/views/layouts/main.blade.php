@@ -11,15 +11,15 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    {{-- @include('includes.header')
-    @include('includes.jumbotron') --}}
+    @include('includes.header')
+    {{-- @include('includes.jumbotron') --}}
 
 
         <main class="container">
             @yield('content')
         </main>
 
-    {{-- @include('includes.footer') --}}
+    @include('includes.footer')
 
         
    

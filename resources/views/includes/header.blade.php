@@ -12,7 +12,7 @@
         <ul>
             @foreach ($links as $link)
             <li>
-                <a href="{{ route($link['route_name']) }}">{{$link['text']}}</a>
+                <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route($link['route_name']) }}">{{$link['text']}}</a>
             </li>
             @endforeach
 
