@@ -4,6 +4,8 @@
 
 {{-- HERO INCLUDE --}}
 @section('content')
-{{-- @include('includes.hero')
-@include('includes.center-nav') --}}
+<div class="text-center">
+    <h1>Welcome on DC COMICS</h1>
+</div>
+{{-- @include('includes.center-nav') --}}
 @endsection
