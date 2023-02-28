@@ -14,6 +14,10 @@
             <p>AVAIBLE</p>
         </div>
         <p>{{ $comic->description }}</p>
+        {{-- BUTTON --}}
+        <a class="btn btn-primary m-3" href="{{ route('comics.index') }}">Indietro</a>
     </div>
+    
 </section>
+
 @endsection
