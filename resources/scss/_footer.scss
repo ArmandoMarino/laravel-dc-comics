@@ -1,0 +1,83 @@
+// NAV LINKS FOOTER-UP
+footer {
+    background-image: url(../assets/img/footer-bg.jpg);
+}
+
+#footer-links {
+    max-height: 300px;
+    color: white;
+
+    nav {
+        display: flex;
+    }
+
+    .col {
+        flex-basis: 20%;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+}
+
+ul {
+    margin-bottom: 10px;
+
+    li {
+        list-style-type: none;
+        font-size: 12px;
+
+        a {
+            text-transform: capitalize;
+            color: grey;
+        }
+    }
+}
+
+#big-logo {
+    width: 100%;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+
+// SOCIALS FOOTER-BOTTOM
+#footer-socials {
+    background-color: $primary-grey;
+    height: 100px;
+
+    #wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    #sign-up {
+        padding: 10px;
+        border: 2px $primary-blue solid;
+        text-align: center;
+
+        h3 {
+            font-size: 15px;
+            color: grey;
+        }
+    }
+
+    #follow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-size: 15px;
+            padding: 10px;
+            color: $primary-blue;
+        }
+
+        a {
+            color: gray;
+            padding: 5px;
+        }
+    }
+}

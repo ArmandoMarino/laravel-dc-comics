@@ -1,7 +1,7 @@
 {{-- FOOTER --}}
 <footer>
     <!-- NAV LINKS -->
-    <section id="footer-links" class="container">
+    {{-- <section id="footer-links" class="container">
         <nav>
             <div class="links-left">
 
@@ -47,7 +47,7 @@
             </div>
         </nav>
 
-    </section>
+    </section> --}}
 
     <!-- SOCIALS -->
     <section id="footer-socials">
