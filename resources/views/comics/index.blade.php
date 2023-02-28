@@ -6,7 +6,7 @@
 @section('content')
 <!-- BLACKBOARD PRODUCTS LIST -->
 <section id="contents-space">
-    <div class="blackboard text-white">
+    <div class="row g-4 blackboard text-white">
         @foreach ($comics as $comic)
         <div class="col-12 col-md-6 col-lg-2">
             <img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">

@@ -12,7 +12,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        // TUTTI
+        // $comics = Comic::all();
+        // ORDINATI BY TITLE ALFABETICO
+        $comics = Comic::orderBy('title', 'ASC')->get();
         return view('comics.index', compact('comics'));
     }
 
