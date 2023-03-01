@@ -40,7 +40,11 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return to_route('comics.index');
+        // PER TORNARE ALLA INDEX DOPO IL SAVE
+        // return to_route('comics.index');
+
+        // PER TORNARE AL COMIC CREATO NELLO SHOW DOPO IL SAVE passando l'ID SPECIFICO
+        return to_route('comics.show', $comic->id);
     }
 
     /**

@@ -99,6 +99,8 @@
 
 
         </div>
+
+        {{-- BUTTON FOR SUBMIT --}}
         <div class="d-flex justify-content-end">
             <button class="btn btn-success my-3" type="submit">Add new Comic</button>
         </div>

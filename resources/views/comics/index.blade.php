@@ -6,7 +6,7 @@
 @section('content')
 <!-- BLACKBOARD PRODUCTS LIST -->
 <section id="contents-space">
-    {{-- BTN to comics.create --}}
+    {{-- BTN to comics.create e settatto il ComicController con il return della view --}}
     <a class="btn btn-primary m-3" href="{{ route('comics.create')}}">Add Comic</a>
 
     <div class="row g-4 blackboard text-white">
