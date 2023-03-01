@@ -11,8 +11,13 @@
     {{-- BUTTON TO ROUTE COMICS INDEX --}}
     <a class="btn btn-secondary my-3" href="{{ route('comics.index')}}">Indietro</a>
 
-    {{-- FORM --}}
-    {{-- <form action="{{ comics.store }}" method="POST"> --}}
+    {{-- FORM  con action a comi.store per salvare con metodo POST--}}
+    <form action="{{ route('comics.store') }}" method="POST">
+
+        {{-- AUTORIZZO IL TOKEN CSRF  --}}
+        @csrf
+        {{-- ------------------------ --}}
+
         <div class="row">
 
             {{-- TITLE --}}
