@@ -4,7 +4,9 @@
 
 {{-- HERO INCLUDE --}}
 @section('content')
-<!-- BLACKBOARD PRODUCTS LIST -->
+  {{-- BUTTON --}}
+  <a class="btn btn-primary m-3" href="{{ route('comics.index') }}">Indietro</a>
+  
 <section id="comic-show" class="d-flex justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
         <img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
@@ -14,10 +16,7 @@
             <p>AVAIBLE</p>
         </div>
         <p>{{ $comic->description }}</p>
-        {{-- BUTTON --}}
-        <a class="btn btn-primary m-3" href="{{ route('comics.index') }}">Indietro</a>
     </div>
-    
 </section>
 
 @endsection
