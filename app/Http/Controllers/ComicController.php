@@ -32,7 +32,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $comic = new Comic();
+
+        // NEL MODEL COMIC HO AUTORIZZATO IL FILLABLE ELENCANDO LE PROPRIETA' DEL NUOVO COMIC
+        $comic->fill($data);
+
+        $comic->save();
+
+        return to_route('comics.index');
     }
 
     /**

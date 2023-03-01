@@ -7,9 +7,15 @@
 <!-- BLACKBOARD PRODUCTS LIST -->
 <section id="comic-show" class="container">
     <h1>Add your comic</h1>
-    <a class="btn btn-secondary" href="{{ route('comics.index')}}">Indietro</a>
-    <form action="">
+
+    {{-- BUTTON TO ROUTE COMICS INDEX --}}
+    <a class="btn btn-secondary my-3" href="{{ route('comics.index')}}">Indietro</a>
+
+    {{-- FORM --}}
+    {{-- <form action="{{ comics.store }}" method="POST"> --}}
         <div class="row">
+
+            {{-- TITLE --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="title" class="form-label">Comic title</label>
@@ -17,6 +23,7 @@
                 </div>
             </div>
             
+            {{-- SERIES --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="series" class="form-label">Comic Series</label>
@@ -24,13 +31,15 @@
                 </div>
             </div>
 
+            {{-- PRICE --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="price" class="form-label">Comic Price</label>
-                    <input name="price" type="number" class="form-control" id="price" placeholder="Price of new Comic">
+                    <input name="price" type="text" class="form-control" id="price" placeholder="Price of new Comic">
                 </div>
             </div>
 
+            {{-- THUMB --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Comic Poster</label>
@@ -38,6 +47,7 @@
                 </div>
             </div>
 
+            {{-- DESCRIPTION --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="description" class="form-label">Description of new Comic</label>
@@ -45,6 +55,7 @@
                 </div>
             </div>
 
+            {{-- SALE DATE --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Sale date</label>
@@ -52,6 +63,7 @@
                 </div>
             </div>
 
+            {{-- TYPE --}}
             <div class="col-6">
                 <div class="mb-3">
                     <label for="type" class="form-label">Type</label>
@@ -64,9 +76,27 @@
                 </div>
             </div>
 
+            {{-- ARTISTS --}}
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="artists" class="form-label">Artists of new Comic</label>
+                    <textarea name="artists" id="artists" class="form-control" cols="30"></textarea>
+                </div>
+            </div>
+
+            {{-- WRITERS --}}
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="writers" class="form-label">Writers of new Comic</label>
+                    <textarea name="writers" id="writers" class="form-control" cols="30"></textarea>
+                </div>
+            </div>
+
 
         </div>
-        
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success my-3" type="submit">Add new Comic</button>
+        </div>
     </form>
     
 </section>
