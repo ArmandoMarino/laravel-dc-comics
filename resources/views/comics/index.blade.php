@@ -6,6 +6,9 @@
 @section('content')
 <!-- BLACKBOARD PRODUCTS LIST -->
 <section id="contents-space">
+    {{-- BTN to comics.create --}}
+    <a class="btn btn-primary m-3" href="{{ route('comics.create')}}">Add Comic</a>
+
     <div class="row g-4 blackboard text-white">
         @foreach ($comics as $comic)
         <div class="col-12 col-md-6 col-lg-2">
