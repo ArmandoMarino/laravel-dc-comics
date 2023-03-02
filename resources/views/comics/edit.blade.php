@@ -94,10 +94,9 @@
                 <div class="mb-3">
                     <label for="type" class="form-label">Type</label>
                     <select class="form-select" id="type" name="type">
-                        <option value="" selected>Select Type</option>
-                        <option @if (old('type') === '') selected @endif>comic book</option>
-                        <option @if (old('type') === 'action book') selected @endif>action book</option>
-                        <option @if (old('type') === 'nothing book') selected @endif>nothing book</option>
+                        <option type="">Select Type</option>
+                        <option @if (old('type', $comic->type) === 'action book') selected @endif>action book</option>
+                        <option @if (old('type', $comic->type) === 'nothing book') selected @endif>nothing book</option>
                       </select>
                 </div>
             </div>
