@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Crea un fumetto')
+@section('title', 'Edit Comic')
 
 {{-- HERO INCLUDE --}}
 @section('content')
@@ -21,7 +21,10 @@
     @endif
     {{-- FORM  con action a comi.store per salvare con metodo POST il novalidate
         ci aiuta a gestire l'errore da php e non da HTML cosi da gestire gli errori--}}
-    <form action="{{ route('comics.store') }}" method="POST" novalidate>
+    <form action="{{ route('comics.update', $comic->id) }}" method="POST" novalidate>
+
+        {{-- METODO PUT non esistente in HTML ma GESTITO del WEB MIDDLEWARE --}}
+        @method('PUT')
 
         {{-- AUTORIZZO IL TOKEN CSRF  --}}
         @csrf
@@ -63,8 +66,7 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Comic Poster</label>
-                    <input name="thumb" type="url" class="form-control" id="thumb" placeholder="Url of new Comic Image" 
-                    value="{{ old('thumb', $comic->thumb)}}" required>
+                    <input name="thumb" type="url" class="form-control" id="thumb" placeholder="Url of new Comic Image" required>
                 </div>
             </div>
 
@@ -104,7 +106,9 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="artists" class="form-label">Artists of new Comic</label>
-                    <textarea name="artists" id="artists" class="form-control" cols="30"></textarea>
+                    <textarea name="artists" id="artists" class="form-control" cols="30">
+                        {{ old('description', $comic->artists)}}
+                    </textarea>
                 </div>
             </div>
 
@@ -112,7 +116,9 @@
             <div class="col-6">
                 <div class="mb-3">
                     <label for="writers" class="form-label">Writers of new Comic</label>
-                    <textarea name="writers" id="writers" class="form-control" cols="30"></textarea>
+                    <textarea name="writers" id="writers" class="form-control" cols="30">
+                        {{ old('description', $comic->writers)}}
+                    </textarea>
                 </div>
             </div>
 
@@ -121,7 +127,7 @@
 
         {{-- BUTTON FOR SUBMIT --}}
         <div class="d-flex justify-content-end">
-            <button class="btn btn-success my-3" type="submit">Add new Comic</button>
+            <button class="btn btn-success my-3" type="submit">Save</button>
         </div>
     </form>
     

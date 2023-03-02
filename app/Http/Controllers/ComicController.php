@@ -86,7 +86,13 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // REQUEST PER CAMPI FORM come lo STORE
+        $data = $request->all();
+        $comic = Comic::findOrFail($id);
+
+        $comic->update($data);
+
+        return to_route('comics.show', $comic->id);
     }
 
     /**

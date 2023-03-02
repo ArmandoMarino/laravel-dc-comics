@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Crea un fumetto')
+@section('title', 'Make Comic')
 
 {{-- HERO INCLUDE --}}
 @section('content')
@@ -114,7 +114,7 @@
 
         {{-- BUTTON FOR SUBMIT --}}
         <div class="d-flex justify-content-end">
-            <button class="btn btn-success my-3" type="submit">Add new Comic</button>
+            <button class="btn btn-success my-3" type="submit">Save</button>
         </div>
     </form>
     
