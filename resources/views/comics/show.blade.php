@@ -7,7 +7,12 @@
   {{-- BUTTON --}}
   <div class="d-flex justify-content-between">
     <a class="btn btn-primary px-4 m-3" href="{{ route('comics.index') }}">Back</a>
-    <a class="btn btn-secondary px-4 m-3" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+    <a class="btn btn-secondary px-4 m-3" href="{{ route('comics.edit', $comic->id) }}">Edit Comic</a>
+    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger m-3">Delete Comic</button>
+    </form>
   </div>
  
 

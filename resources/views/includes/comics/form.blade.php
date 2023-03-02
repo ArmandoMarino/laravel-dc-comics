@@ -65,7 +65,8 @@
      <div class="col-6">
          <div class="mb-3">
              <label for="thumb" class="form-label">Comic Poster</label>
-             <input name="thumb" type="url" class="form-control" id="thumb" placeholder="Url of new Comic Image" required>
+             <input name="thumb" type="url" class="form-control" id="thumb" placeholder="Url of new Comic Image" 
+             value="{{ old('thumb', $comic->thumb)}}" required>
          </div>
      </div>
 

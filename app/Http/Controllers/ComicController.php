@@ -96,7 +96,9 @@ class ComicController extends Controller
 
         $comic->update($data);
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)
+            ->with('message', "Change made successfully")
+            ->with('type', 'success');
     }
 
     /**
@@ -104,6 +106,12 @@ class ComicController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+        // WITH passo una  chiave e valore corrispondente
+        // e concatenato con un'altra chiave e valore dopo il delete avvenuto con successo
+        return to_route('comics.index')
+            ->with('message', "$comic->title successfully Deleted")
+            ->with('type', 'success');
     }
 }
