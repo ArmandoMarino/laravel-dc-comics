@@ -5,8 +5,13 @@
 {{-- HERO INCLUDE --}}
 @section('content')
   {{-- BUTTON --}}
-  <a class="btn btn-primary m-3" href="{{ route('comics.index') }}">Indietro</a>
-  
+  <div class="d-flex justify-content-between">
+    <a class="btn btn-primary px-4 m-3" href="{{ route('comics.index') }}">Back</a>
+    <a class="btn btn-secondary px-4 m-3" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
+  </div>
+ 
+
+
 <section id="comic-show" class="d-flex justify-content-center">
     <div class="col-12 col-md-10 col-lg-8">
         <img class="img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
