@@ -12,7 +12,6 @@
     <a class="btn btn-secondary my-3" href="{{ route('comics.index')}}">Back</a>
 
     @include('includes.comics.form')
-
     
 </section>
 

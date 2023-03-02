@@ -26,7 +26,7 @@ class ComicController extends Controller
     {
 
         // CREO un MODELLO VUOTO COSI DA POTER ENTRARE NELL'IF del FORM
-        // ESISTERA' MA VUOTO E CI PASSO
+        // ESISTERA' MA VUOTO E CI PASSO se esiste sul DB si andrà nel PUT
         $comic = new Comic();
         return view('comics.create', compact('comic'));
     }
