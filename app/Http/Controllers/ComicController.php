@@ -33,11 +33,18 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         // VALIDATE SUI CAMPI CON ATTRIBUTO HTML REQUIRED NEL FORM
+        //  E NEL DATABASE COME CAMPI NON NULLABILI
         $request->validate([
             'title' => 'required|string|unique:comics',
             'series' => 'required|string',
             'price' => 'required|string',
             'thumb' => 'nullable|url'
+        ], [
+            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
+            'title.required' => 'The Title field is required!',
+            'series.required' => 'The Series field is required!',
+            'price.required' => 'The Price field is required!',
+            'thumb.url' => 'Comic poster URL is not valid!',
         ]);
 
         $data = $request->all();
