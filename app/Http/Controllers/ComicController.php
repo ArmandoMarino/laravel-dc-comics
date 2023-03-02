@@ -32,6 +32,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        // VALIDATE SUI CAMPI CON ATTRIBUTO HTML REQUIRED NEL FORM
+        $request->validate([
+            'title' => 'required|string|unique:comics',
+            'series' => 'required|string',
+            'price' => 'required|string',
+            'thumb' => 'nullable|url'
+        ]);
+
         $data = $request->all();
         $comic = new Comic();
 
