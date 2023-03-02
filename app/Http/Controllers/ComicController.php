@@ -24,7 +24,11 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+
+        // CREO un MODELLO VUOTO COSI DA POTER ENTRARE NELL'IF del FORM
+        // ESISTERA' MA VUOTO E CI PASSO
+        $comic = new Comic();
+        return view('comics.create', compact('comic'));
     }
 
     /**
